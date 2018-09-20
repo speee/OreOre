@@ -1,0 +1,62 @@
+PODS:
+  - Apollo (0.9.1):
+    - Apollo/Core (= 0.9.1)
+  - Apollo/Core (0.9.1)
+  - Embassy (4.0.6)
+  - EnvoyAmbassador (4.0.2):
+    - Embassy (~> 4.0)
+  - Fakery (3.3.0)
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - Nimble (7.0.3)
+  - Nimble-Snapshots (6.3.0):
+    - Nimble-Snapshots/Core (= 6.3.0)
+  - Nimble-Snapshots/Core (6.3.0):
+    - FBSnapshotTestCase (~> 2.0)
+    - Nimble (~> 7.0)
+  - OreOre (1.0.0):
+    - Apollo
+    - Embassy
+    - EnvoyAmbassador
+    - Fakery
+  - Quick (1.2.0)
+
+DEPENDENCIES:
+  - FBSnapshotTestCase (~> 2.1.4)
+  - Nimble (~> 7.0.2)
+  - Nimble-Snapshots (~> 6.3.0)
+  - OreOre (from `../`)
+  - Quick (~> 1.2.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Apollo
+    - Embassy
+    - EnvoyAmbassador
+    - Fakery
+    - FBSnapshotTestCase
+    - Nimble
+    - Nimble-Snapshots
+    - Quick
+
+EXTERNAL SOURCES:
+  OreOre:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Apollo: 308d9b7b4e2918c17bafb113cfbd65773c29ccd6
+  Embassy: 76ea224c371ec69169eac7425c48d332edf8457e
+  EnvoyAmbassador: 64d18c16365892712767116c016179a95805d83d
+  Fakery: 3aae11a87721c807c18c6456500d088c1230d3e5
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  Nimble: 7f5a9c447a33002645a071bddafbfb24ea70e0ac
+  Nimble-Snapshots: f5459b5b091678dc942d03ec4741cacb58ba4a52
+  OreOre: 7b6bb7fe52e3b100c9935d66d3348ce82aff99b7
+  Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
+
+PODFILE CHECKSUM: 2d52855aef13761d7ffcfa50cefb704b894f896a
+
+COCOAPODS: 1.5.3
