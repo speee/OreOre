@@ -20,10 +20,6 @@ it, simply add the following line to your Podfile:
 pod 'OreOre'
 ```
 
-## Author
-
-git, hayato.iida.0213@gmail.com
-
 ## License
 
 OreOre is available under the MIT license. See the LICENSE file for more info.
