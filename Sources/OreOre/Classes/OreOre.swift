@@ -74,7 +74,7 @@ public extension HavingResultMap where Self: Encodable {
       guard let label = child.label else {
         return
       }
-      dict[label] = encodeSingle(value: child.value) ?? NSNull()
+      dict[label] = encodeSingle(value: child.value) 
     }
     if dict["__typename"] == nil {
       dict["__typename"] = String(describing: type(of: self))
