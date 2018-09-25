@@ -1,6 +1,6 @@
 # OreOre
 
-[![CI Status](https://img.shields.io/travis/git/OreOre.svg?style=flat)](https://travis-ci.org/git/OreOre)
+[![CI Status](https://img.shields.io/travis/speee/OreOre.svg?style=flat)](https://travis-ci.org/speee/OreOre)
 [![Version](https://img.shields.io/cocoapods/v/OreOre.svg?style=flat)](https://cocoapods.org/pods/OreOre)
 [![License](https://img.shields.io/cocoapods/l/OreOre.svg?style=flat)](https://cocoapods.org/pods/OreOre)
 [![Platform](https://img.shields.io/cocoapods/p/OreOre.svg?style=flat)](https://cocoapods.org/pods/OreOre)
