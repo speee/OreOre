@@ -52,6 +52,16 @@
                ReferencedContainer = "container:OreOre.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "0B41250B215B8EDB00B64360"
+               BuildableName = "OreOre_ExampleUITests.xctest"
+               BlueprintName = "OreOre_ExampleUITests"
+               ReferencedContainer = "container:OreOre.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
