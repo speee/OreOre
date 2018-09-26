@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		0B41250F215B8EDB00B64360 /* OreOre_ExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B41250E215B8EDB00B64360 /* OreOre_ExampleUITests.swift */; };
+		0B412527215BA16000B64360 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B41251F215BA15F00B64360 /* AppDelegate.swift */; };
+		0B412528215BA16000B64360 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B412520215BA15F00B64360 /* LaunchScreen.xib */; };
+		0B412529215BA16000B64360 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B412522215BA15F00B64360 /* Main.storyboard */; };
+		0B41252A215BA16000B64360 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B412524215BA15F00B64360 /* Images.xcassets */; };
+		0B41252B215BA16000B64360 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B412525215BA15F00B64360 /* Info.plist */; };
+		0B41252C215BA16000B64360 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B412526215BA15F00B64360 /* ViewController.swift */; };
+		0B41252E215BA1F700B64360 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B41252D215BA1F700B64360 /* API.swift */; };
 		0B4A333221537DBC007EEFF2 /* SampleOre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4A333021537DBC007EEFF2 /* SampleOre.swift */; };
 		0B4A333321537DBC007EEFF2 /* SampleResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4A333121537DBC007EEFF2 /* SampleResponseData.swift */; };
-		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
-		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
-		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
-		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		66D572DD10AA982C9A771A89 /* Pods_OreOre_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E11F8A08ABC1208FC4CF6A0F /* Pods_OreOre_Tests.framework */; };
 		B3B6A47DDB082FBFDEED6A1D /* Pods_OreOre_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E55B2D580400925F10DA1C3 /* Pods_OreOre_Example.framework */; };
@@ -41,18 +43,21 @@
 		0B41250C215B8EDB00B64360 /* OreOre_ExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OreOre_ExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B41250E215B8EDB00B64360 /* OreOre_ExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OreOre_ExampleUITests.swift; sourceTree = "<group>"; };
 		0B412510215B8EDB00B64360 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B412519215B9F7200B64360 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
+		0B41251B215B9F9900B64360 /* Repository.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Repository.graphql; sourceTree = "<group>"; };
+		0B41251F215BA15F00B64360 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0B412521215BA15F00B64360 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		0B412523215BA15F00B64360 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0B412524215BA15F00B64360 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0B412525215BA15F00B64360 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B412526215BA15F00B64360 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0B41252D215BA1F700B64360 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		0B4A333021537DBC007EEFF2 /* SampleOre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleOre.swift; sourceTree = "<group>"; };
 		0B4A333121537DBC007EEFF2 /* SampleResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleResponseData.swift; sourceTree = "<group>"; };
 		33FDA270263A55CFF89E7626 /* Pods-OreOre_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OreOre_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OreOre_Tests/Pods-OreOre_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		3E55B2D580400925F10DA1C3 /* Pods_OreOre_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OreOre_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E25B8D51DFC5F22784A3155 /* OreOre.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = OreOre.podspec; path = ../OreOre.podspec; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* OreOre_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OreOre_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* OreOre_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OreOre_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
@@ -100,11 +105,27 @@
 			path = OreOre_ExampleUITests;
 			sourceTree = "<group>";
 		};
+		0B41251E215BA15F00B64360 /* OreOre_Example */ = {
+			isa = PBXGroup;
+			children = (
+				0B41252D215BA1F700B64360 /* API.swift */,
+				0B412519215B9F7200B64360 /* schema.json */,
+				0B41251B215B9F9900B64360 /* Repository.graphql */,
+				0B41251F215BA15F00B64360 /* AppDelegate.swift */,
+				0B412520215BA15F00B64360 /* LaunchScreen.xib */,
+				0B412522215BA15F00B64360 /* Main.storyboard */,
+				0B412524215BA15F00B64360 /* Images.xcassets */,
+				0B412525215BA15F00B64360 /* Info.plist */,
+				0B412526215BA15F00B64360 /* ViewController.swift */,
+			);
+			path = OreOre_Example;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				0B41251E215BA15F00B64360 /* OreOre_Example */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
-				607FACD21AFB9204008FA782 /* Example for OreOre */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				0B41250D215B8EDB00B64360 /* OreOre_ExampleUITests */,
 				607FACD11AFB9204008FA782 /* Products */,
@@ -121,28 +142,6 @@
 				0B41250C215B8EDB00B64360 /* OreOre_ExampleUITests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		607FACD21AFB9204008FA782 /* Example for OreOre */ = {
-			isa = PBXGroup;
-			children = (
-				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
-				607FACD91AFB9204008FA782 /* Main.storyboard */,
-				607FACDC1AFB9204008FA782 /* Images.xcassets */,
-				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
-				607FACD31AFB9204008FA782 /* Supporting Files */,
-			);
-			name = "Example for OreOre";
-			path = OreOre;
-			sourceTree = "<group>";
-		};
-		607FACD31AFB9204008FA782 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				607FACD41AFB9204008FA782 /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		607FACE81AFB9204008FA782 /* Tests */ = {
@@ -224,6 +223,7 @@
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
 				5299F75CA06F102A84551CFE /* [CP] Embed Pods Frameworks */,
+				0B41251D215BA02600B64360 /* Generate Apollo GraphQL API */,
 			);
 			buildRules = (
 			);
@@ -312,9 +312,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
-				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
-				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				0B41252B215BA16000B64360 /* Info.plist in Resources */,
+				0B41252A215BA16000B64360 /* Images.xcassets in Resources */,
+				0B412528215BA16000B64360 /* LaunchScreen.xib in Resources */,
+				0B412529215BA16000B64360 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +329,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0B41251D215BA02600B64360 /* Generate Apollo GraphQL API */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Apollo GraphQL API";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "APOLLO_FRAMEWORK_PATH=\"$(eval find $FRAMEWORK_SEARCH_PATHS -name \"Apollo.framework\" -maxdepth 1)\"\n\nif [ -z \"$APOLLO_FRAMEWORK_PATH\" ]; then\necho \"error: Couldn't find Apollo.framework in FRAMEWORK_SEARCH_PATHS; make sure to add the framework to your project.\"\nexit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}\"\n$APOLLO_FRAMEWORK_PATH/check-and-run-apollo-cli.sh codegen:generate --queries=\"$(find . -name '*.graphql')\" --schema=schema.json API.swift";
+		};
 		5299F75CA06F102A84551CFE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -429,8 +444,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
-				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				0B41252C215BA16000B64360 /* ViewController.swift in Sources */,
+				0B41252E215BA1F700B64360 /* API.swift in Sources */,
+				0B412527215BA16000B64360 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,20 +476,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		607FACD91AFB9204008FA782 /* Main.storyboard */ = {
+		0B412520215BA15F00B64360 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				607FACDA1AFB9204008FA782 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		607FACDE1AFB9204008FA782 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				607FACDF1AFB9204008FA782 /* Base */,
+				0B412521215BA15F00B64360 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		0B412522215BA15F00B64360 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0B412523215BA15F00B64360 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -482,6 +498,7 @@
 		0B412513215B8EDB00B64360 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -509,6 +526,7 @@
 		0B412514215B8EDB00B64360 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -635,7 +653,7 @@
 			baseConfigurationReference = A11DCF046BB35E46C52AE0E0 /* Pods-OreOre_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = OreOre/Info.plist;
+				INFOPLIST_FILE = OreOre_Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -650,7 +668,7 @@
 			baseConfigurationReference = E7EC6149B3552B85E340ED60 /* Pods-OreOre_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = OreOre/Info.plist;
+				INFOPLIST_FILE = OreOre_Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -664,6 +682,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 33FDA270263A55CFF89E7626 /* Pods-OreOre_Tests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -686,6 +705,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DB27962CD84CCD426A8EF6F0 /* Pods-OreOre_Tests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
