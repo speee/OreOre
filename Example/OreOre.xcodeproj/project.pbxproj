@@ -17,6 +17,7 @@
 		0B41252E215BA1F700B64360 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B41252D215BA1F700B64360 /* API.swift */; };
 		0B4A333221537DBC007EEFF2 /* SampleOre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4A333021537DBC007EEFF2 /* SampleOre.swift */; };
 		0B4A333321537DBC007EEFF2 /* SampleResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4A333121537DBC007EEFF2 /* SampleResponseData.swift */; };
+		0BE27B9F216380A200F670A3 /* Author.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 0BE27B9E216380A200F670A3 /* Author.graphql */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		66D572DD10AA982C9A771A89 /* Pods_OreOre_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E11F8A08ABC1208FC4CF6A0F /* Pods_OreOre_Tests.framework */; };
 		B3B6A47DDB082FBFDEED6A1D /* Pods_OreOre_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E55B2D580400925F10DA1C3 /* Pods_OreOre_Example.framework */; };
@@ -44,7 +45,7 @@
 		0B41250E215B8EDB00B64360 /* OreOre_ExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OreOre_ExampleUITests.swift; sourceTree = "<group>"; };
 		0B412510215B8EDB00B64360 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B412519215B9F7200B64360 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
-		0B41251B215B9F9900B64360 /* Repository.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Repository.graphql; sourceTree = "<group>"; };
+		0B41251B215B9F9900B64360 /* Posts.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Posts.graphql; sourceTree = "<group>"; };
 		0B41251F215BA15F00B64360 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B412521215BA15F00B64360 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		0B412523215BA15F00B64360 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -54,6 +55,7 @@
 		0B41252D215BA1F700B64360 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		0B4A333021537DBC007EEFF2 /* SampleOre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleOre.swift; sourceTree = "<group>"; };
 		0B4A333121537DBC007EEFF2 /* SampleResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleResponseData.swift; sourceTree = "<group>"; };
+		0BE27B9E216380A200F670A3 /* Author.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Author.graphql; sourceTree = "<group>"; };
 		33FDA270263A55CFF89E7626 /* Pods-OreOre_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OreOre_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OreOre_Tests/Pods-OreOre_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		3E55B2D580400925F10DA1C3 /* Pods_OreOre_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OreOre_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E25B8D51DFC5F22784A3155 /* OreOre.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = OreOre.podspec; path = ../OreOre.podspec; sourceTree = "<group>"; };
@@ -110,7 +112,8 @@
 			children = (
 				0B41252D215BA1F700B64360 /* API.swift */,
 				0B412519215B9F7200B64360 /* schema.json */,
-				0B41251B215B9F9900B64360 /* Repository.graphql */,
+				0B41251B215B9F9900B64360 /* Posts.graphql */,
+				0BE27B9E216380A200F670A3 /* Author.graphql */,
 				0B41251F215BA15F00B64360 /* AppDelegate.swift */,
 				0B412520215BA15F00B64360 /* LaunchScreen.xib */,
 				0B412522215BA15F00B64360 /* Main.storyboard */,
@@ -316,6 +319,7 @@
 				0B41252A215BA16000B64360 /* Images.xcassets in Resources */,
 				0B412528215BA16000B64360 /* LaunchScreen.xib in Resources */,
 				0B412529215BA16000B64360 /* Main.storyboard in Resources */,
+				0BE27B9F216380A200F670A3 /* Author.graphql in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

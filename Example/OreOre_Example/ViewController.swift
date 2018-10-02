@@ -7,12 +7,17 @@
 //
 
 import UIKit
+import Apollo
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+      apollo.fetch(query: AuthorQuery(id: 1)) { (result, error) in
+        print(result?.data?.author?.firstName)
+        print(result?.data?.author?.lastName)
+        print(result?.data?.author?.posts)
+      }
     }
 
     override func didReceiveMemoryWarning() {

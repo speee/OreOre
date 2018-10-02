@@ -2,18 +2,25 @@
 
 import Apollo
 
-public final class RepositoryQuery: GraphQLQuery {
+public final class AuthorQuery: GraphQLQuery {
   public let operationDefinition =
-    "query Repository {\n  repository(owner: \"apollographql\", name: \"apollo-ios\") {\n    __typename\n    issueOrPullRequest(number: 13) {\n      __typename\n      ... on Issue {\n        body\n        ... on UniformResourceLocatable {\n          url\n        }\n        author {\n          __typename\n          avatarUrl\n        }\n      }\n      ... on Reactable {\n        viewerCanReact\n        ... on Comment {\n          author {\n            __typename\n            login\n          }\n        }\n      }\n    }\n  }\n}"
+    "query author($id: Int!) {\n  author(id: $id) {\n    __typename\n    firstName\n    lastName\n    posts {\n      __typename\n      id\n      title\n    }\n  }\n}"
 
-  public init() {
+  public var id: Int
+
+  public init(id: Int) {
+    self.id = id
+  }
+
+  public var variables: GraphQLMap? {
+    return ["id": id]
   }
 
   public struct Data: GraphQLSelectionSet {
     public static let possibleTypes = ["Query"]
 
     public static let selections: [GraphQLSelection] = [
-      GraphQLField("repository", arguments: ["owner": "apollographql", "name": "apollo-ios"], type: .object(Repository.selections)),
+      GraphQLField("author", arguments: ["id": GraphQLVariable("id")], type: .object(Author.selections)),
     ]
 
     public private(set) var resultMap: ResultMap
@@ -22,26 +29,27 @@ public final class RepositoryQuery: GraphQLQuery {
       self.resultMap = unsafeResultMap
     }
 
-    public init(repository: Repository? = nil) {
-      self.init(unsafeResultMap: ["__typename": "Query", "repository": repository.flatMap { (value: Repository) -> ResultMap in value.resultMap }])
+    public init(author: Author? = nil) {
+      self.init(unsafeResultMap: ["__typename": "Query", "author": author.flatMap { (value: Author) -> ResultMap in value.resultMap }])
     }
 
-    /// Lookup a given repository by the owner and repository name.
-    public var repository: Repository? {
+    public var author: Author? {
       get {
-        return (resultMap["repository"] as? ResultMap).flatMap { Repository(unsafeResultMap: $0) }
+        return (resultMap["author"] as? ResultMap).flatMap { Author(unsafeResultMap: $0) }
       }
       set {
-        resultMap.updateValue(newValue?.resultMap, forKey: "repository")
+        resultMap.updateValue(newValue?.resultMap, forKey: "author")
       }
     }
 
-    public struct Repository: GraphQLSelectionSet {
-      public static let possibleTypes = ["Repository"]
+    public struct Author: GraphQLSelectionSet {
+      public static let possibleTypes = ["Author"]
 
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
-        GraphQLField("issueOrPullRequest", arguments: ["number": 13], type: .object(IssueOrPullRequest.selections)),
+        GraphQLField("firstName", type: .scalar(String.self)),
+        GraphQLField("lastName", type: .scalar(String.self)),
+        GraphQLField("posts", type: .list(.object(Post.selections))),
       ]
 
       public private(set) var resultMap: ResultMap
@@ -50,8 +58,8 @@ public final class RepositoryQuery: GraphQLQuery {
         self.resultMap = unsafeResultMap
       }
 
-      public init(issueOrPullRequest: IssueOrPullRequest? = nil) {
-        self.init(unsafeResultMap: ["__typename": "Repository", "issueOrPullRequest": issueOrPullRequest.flatMap { (value: IssueOrPullRequest) -> ResultMap in value.resultMap }])
+      public init(firstName: String? = nil, lastName: String? = nil, posts: [Post?]? = nil) {
+        self.init(unsafeResultMap: ["__typename": "Author", "firstName": firstName, "lastName": lastName, "posts": posts.flatMap { (value: [Post?]) -> [ResultMap?] in value.map { (value: Post?) -> ResultMap? in value.flatMap { (value: Post) -> ResultMap in value.resultMap } } }])
       }
 
       public var __typename: String {
@@ -63,28 +71,40 @@ public final class RepositoryQuery: GraphQLQuery {
         }
       }
 
-      /// Returns a single issue-like object from the current repository by number.
-      public var issueOrPullRequest: IssueOrPullRequest? {
+      public var firstName: String? {
         get {
-          return (resultMap["issueOrPullRequest"] as? ResultMap).flatMap { IssueOrPullRequest(unsafeResultMap: $0) }
+          return resultMap["firstName"] as? String
         }
         set {
-          resultMap.updateValue(newValue?.resultMap, forKey: "issueOrPullRequest")
+          resultMap.updateValue(newValue, forKey: "firstName")
         }
       }
 
-      public struct IssueOrPullRequest: GraphQLSelectionSet {
-        public static let possibleTypes = ["Issue", "PullRequest"]
+      public var lastName: String? {
+        get {
+          return resultMap["lastName"] as? String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "lastName")
+        }
+      }
+
+      public var posts: [Post?]? {
+        get {
+          return (resultMap["posts"] as? [ResultMap?]).flatMap { (value: [ResultMap?]) -> [Post?] in value.map { (value: ResultMap?) -> Post? in value.flatMap { (value: ResultMap) -> Post in Post(unsafeResultMap: value) } } }
+        }
+        set {
+          resultMap.updateValue(newValue.flatMap { (value: [Post?]) -> [ResultMap?] in value.map { (value: Post?) -> ResultMap? in value.flatMap { (value: Post) -> ResultMap in value.resultMap } } }, forKey: "posts")
+        }
+      }
+
+      public struct Post: GraphQLSelectionSet {
+        public static let possibleTypes = ["Post"]
 
         public static let selections: [GraphQLSelection] = [
-          GraphQLTypeCase(
-            variants: ["Issue": AsIssue.selections],
-            default: [
-              GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
-              GraphQLField("viewerCanReact", type: .nonNull(.scalar(Bool.self))),
-              GraphQLField("author", type: .object(Author.selections)),
-            ]
-          )
+          GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+          GraphQLField("id", type: .nonNull(.scalar(Int.self))),
+          GraphQLField("title", type: .scalar(String.self)),
         ]
 
         public private(set) var resultMap: ResultMap
@@ -93,12 +113,8 @@ public final class RepositoryQuery: GraphQLQuery {
           self.resultMap = unsafeResultMap
         }
 
-        public static func makePullRequest(viewerCanReact: Bool, author: Author? = nil) -> IssueOrPullRequest {
-          return IssueOrPullRequest(unsafeResultMap: ["__typename": "PullRequest", "viewerCanReact": viewerCanReact, "author": author.flatMap { (value: Author) -> ResultMap in value.resultMap }])
-        }
-
-        public static func makeIssue(body: String, url: String, author: AsIssue.Author? = nil, viewerCanReact: Bool) -> IssueOrPullRequest {
-          return IssueOrPullRequest(unsafeResultMap: ["__typename": "Issue", "body": body, "url": url, "author": author.flatMap { (value: AsIssue.Author) -> ResultMap in value.resultMap }, "viewerCanReact": viewerCanReact])
+        public init(id: Int, title: String? = nil) {
+          self.init(unsafeResultMap: ["__typename": "Post", "id": id, "title": title])
         }
 
         public var __typename: String {
@@ -110,210 +126,160 @@ public final class RepositoryQuery: GraphQLQuery {
           }
         }
 
-        /// Can user react to this subject
-        public var viewerCanReact: Bool {
+        public var id: Int {
           get {
-            return resultMap["viewerCanReact"]! as! Bool
+            return resultMap["id"]! as! Int
           }
           set {
-            resultMap.updateValue(newValue, forKey: "viewerCanReact")
+            resultMap.updateValue(newValue, forKey: "id")
           }
         }
 
-        /// The actor who authored the comment.
-        public var author: Author? {
+        public var title: String? {
           get {
-            return (resultMap["author"] as? ResultMap).flatMap { Author(unsafeResultMap: $0) }
+            return resultMap["title"] as? String
           }
           set {
-            resultMap.updateValue(newValue?.resultMap, forKey: "author")
+            resultMap.updateValue(newValue, forKey: "title")
           }
         }
+      }
+    }
+  }
+}
 
-        public struct Author: GraphQLSelectionSet {
-          public static let possibleTypes = ["Organization", "User", "Bot"]
+public final class PostsQuery: GraphQLQuery {
+  public let operationDefinition =
+    "query posts {\n  posts {\n    __typename\n    id\n    author {\n      __typename\n      id\n      firstName\n    }\n    title\n  }\n}"
 
-          public static let selections: [GraphQLSelection] = [
-            GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
-            GraphQLField("login", type: .nonNull(.scalar(String.self))),
-          ]
+  public init() {
+  }
 
-          public private(set) var resultMap: ResultMap
+  public struct Data: GraphQLSelectionSet {
+    public static let possibleTypes = ["Query"]
 
-          public init(unsafeResultMap: ResultMap) {
-            self.resultMap = unsafeResultMap
-          }
+    public static let selections: [GraphQLSelection] = [
+      GraphQLField("posts", type: .list(.object(Post.selections))),
+    ]
 
-          public static func makeOrganization(login: String) -> Author {
-            return Author(unsafeResultMap: ["__typename": "Organization", "login": login])
-          }
+    public private(set) var resultMap: ResultMap
 
-          public static func makeUser(login: String) -> Author {
-            return Author(unsafeResultMap: ["__typename": "User", "login": login])
-          }
+    public init(unsafeResultMap: ResultMap) {
+      self.resultMap = unsafeResultMap
+    }
 
-          public static func makeBot(login: String) -> Author {
-            return Author(unsafeResultMap: ["__typename": "Bot", "login": login])
-          }
+    public init(posts: [Post?]? = nil) {
+      self.init(unsafeResultMap: ["__typename": "Query", "posts": posts.flatMap { (value: [Post?]) -> [ResultMap?] in value.map { (value: Post?) -> ResultMap? in value.flatMap { (value: Post) -> ResultMap in value.resultMap } } }])
+    }
 
-          public var __typename: String {
-            get {
-              return resultMap["__typename"]! as! String
-            }
-            set {
-              resultMap.updateValue(newValue, forKey: "__typename")
-            }
-          }
+    public var posts: [Post?]? {
+      get {
+        return (resultMap["posts"] as? [ResultMap?]).flatMap { (value: [ResultMap?]) -> [Post?] in value.map { (value: ResultMap?) -> Post? in value.flatMap { (value: ResultMap) -> Post in Post(unsafeResultMap: value) } } }
+      }
+      set {
+        resultMap.updateValue(newValue.flatMap { (value: [Post?]) -> [ResultMap?] in value.map { (value: Post?) -> ResultMap? in value.flatMap { (value: Post) -> ResultMap in value.resultMap } } }, forKey: "posts")
+      }
+    }
 
-          /// The username of the actor.
-          public var login: String {
-            get {
-              return resultMap["login"]! as! String
-            }
-            set {
-              resultMap.updateValue(newValue, forKey: "login")
-            }
-          }
+    public struct Post: GraphQLSelectionSet {
+      public static let possibleTypes = ["Post"]
+
+      public static let selections: [GraphQLSelection] = [
+        GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+        GraphQLField("id", type: .nonNull(.scalar(Int.self))),
+        GraphQLField("author", type: .object(Author.selections)),
+        GraphQLField("title", type: .scalar(String.self)),
+      ]
+
+      public private(set) var resultMap: ResultMap
+
+      public init(unsafeResultMap: ResultMap) {
+        self.resultMap = unsafeResultMap
+      }
+
+      public init(id: Int, author: Author? = nil, title: String? = nil) {
+        self.init(unsafeResultMap: ["__typename": "Post", "id": id, "author": author.flatMap { (value: Author) -> ResultMap in value.resultMap }, "title": title])
+      }
+
+      public var __typename: String {
+        get {
+          return resultMap["__typename"]! as! String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "__typename")
+        }
+      }
+
+      public var id: Int {
+        get {
+          return resultMap["id"]! as! Int
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "id")
+        }
+      }
+
+      public var author: Author? {
+        get {
+          return (resultMap["author"] as? ResultMap).flatMap { Author(unsafeResultMap: $0) }
+        }
+        set {
+          resultMap.updateValue(newValue?.resultMap, forKey: "author")
+        }
+      }
+
+      public var title: String? {
+        get {
+          return resultMap["title"] as? String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "title")
+        }
+      }
+
+      public struct Author: GraphQLSelectionSet {
+        public static let possibleTypes = ["Author"]
+
+        public static let selections: [GraphQLSelection] = [
+          GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+          GraphQLField("id", type: .nonNull(.scalar(Int.self))),
+          GraphQLField("firstName", type: .scalar(String.self)),
+        ]
+
+        public private(set) var resultMap: ResultMap
+
+        public init(unsafeResultMap: ResultMap) {
+          self.resultMap = unsafeResultMap
         }
 
-        public var asIssue: AsIssue? {
+        public init(id: Int, firstName: String? = nil) {
+          self.init(unsafeResultMap: ["__typename": "Author", "id": id, "firstName": firstName])
+        }
+
+        public var __typename: String {
           get {
-            if !AsIssue.possibleTypes.contains(__typename) { return nil }
-            return AsIssue(unsafeResultMap: resultMap)
+            return resultMap["__typename"]! as! String
           }
           set {
-            guard let newValue = newValue else { return }
-            resultMap = newValue.resultMap
+            resultMap.updateValue(newValue, forKey: "__typename")
           }
         }
 
-        public struct AsIssue: GraphQLSelectionSet {
-          public static let possibleTypes = ["Issue"]
-
-          public static let selections: [GraphQLSelection] = [
-            GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
-            GraphQLField("body", type: .nonNull(.scalar(String.self))),
-            GraphQLField("url", type: .nonNull(.scalar(String.self))),
-            GraphQLField("author", type: .object(Author.selections)),
-            GraphQLField("viewerCanReact", type: .nonNull(.scalar(Bool.self))),
-            GraphQLField("author", type: .object(Author.selections)),
-          ]
-
-          public private(set) var resultMap: ResultMap
-
-          public init(unsafeResultMap: ResultMap) {
-            self.resultMap = unsafeResultMap
+        public var id: Int {
+          get {
+            return resultMap["id"]! as! Int
           }
-
-          public init(body: String, url: String, author: Author? = nil, viewerCanReact: Bool) {
-            self.init(unsafeResultMap: ["__typename": "Issue", "body": body, "url": url, "author": author.flatMap { (value: Author) -> ResultMap in value.resultMap }, "viewerCanReact": viewerCanReact])
+          set {
+            resultMap.updateValue(newValue, forKey: "id")
           }
+        }
 
-          public var __typename: String {
-            get {
-              return resultMap["__typename"]! as! String
-            }
-            set {
-              resultMap.updateValue(newValue, forKey: "__typename")
-            }
+        public var firstName: String? {
+          get {
+            return resultMap["firstName"] as? String
           }
-
-          /// Identifies the body of the issue.
-          public var body: String {
-            get {
-              return resultMap["body"]! as! String
-            }
-            set {
-              resultMap.updateValue(newValue, forKey: "body")
-            }
-          }
-
-          /// The HTTP URL for this issue
-          public var url: String {
-            get {
-              return resultMap["url"]! as! String
-            }
-            set {
-              resultMap.updateValue(newValue, forKey: "url")
-            }
-          }
-
-          /// The actor who authored the comment.
-          public var author: Author? {
-            get {
-              return (resultMap["author"] as? ResultMap).flatMap { Author(unsafeResultMap: $0) }
-            }
-            set {
-              resultMap.updateValue(newValue?.resultMap, forKey: "author")
-            }
-          }
-
-          /// Can user react to this subject
-          public var viewerCanReact: Bool {
-            get {
-              return resultMap["viewerCanReact"]! as! Bool
-            }
-            set {
-              resultMap.updateValue(newValue, forKey: "viewerCanReact")
-            }
-          }
-
-          public struct Author: GraphQLSelectionSet {
-            public static let possibleTypes = ["Organization", "User", "Bot"]
-
-            public static let selections: [GraphQLSelection] = [
-              GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
-              GraphQLField("avatarUrl", type: .nonNull(.scalar(String.self))),
-              GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
-              GraphQLField("login", type: .nonNull(.scalar(String.self))),
-            ]
-
-            public private(set) var resultMap: ResultMap
-
-            public init(unsafeResultMap: ResultMap) {
-              self.resultMap = unsafeResultMap
-            }
-
-            public static func makeOrganization(avatarUrl: String, login: String) -> Author {
-              return Author(unsafeResultMap: ["__typename": "Organization", "avatarUrl": avatarUrl, "login": login])
-            }
-
-            public static func makeUser(avatarUrl: String, login: String) -> Author {
-              return Author(unsafeResultMap: ["__typename": "User", "avatarUrl": avatarUrl, "login": login])
-            }
-
-            public static func makeBot(avatarUrl: String, login: String) -> Author {
-              return Author(unsafeResultMap: ["__typename": "Bot", "avatarUrl": avatarUrl, "login": login])
-            }
-
-            public var __typename: String {
-              get {
-                return resultMap["__typename"]! as! String
-              }
-              set {
-                resultMap.updateValue(newValue, forKey: "__typename")
-              }
-            }
-
-            /// A URL pointing to the actor's public avatar.
-            public var avatarUrl: String {
-              get {
-                return resultMap["avatarUrl"]! as! String
-              }
-              set {
-                resultMap.updateValue(newValue, forKey: "avatarUrl")
-              }
-            }
-
-            /// The username of the actor.
-            public var login: String {
-              get {
-                return resultMap["login"]! as! String
-              }
-              set {
-                resultMap.updateValue(newValue, forKey: "login")
-              }
-            }
+          set {
+            resultMap.updateValue(newValue, forKey: "firstName")
           }
         }
       }

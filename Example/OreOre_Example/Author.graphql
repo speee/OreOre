@@ -1,0 +1,10 @@
+query author($id: Int!){
+  author(id: $id){
+    firstName
+    lastName
+    posts {
+      id
+      title
+    }
+  }
+}
