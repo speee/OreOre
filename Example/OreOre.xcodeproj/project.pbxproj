@@ -18,7 +18,6 @@
 		0B4A333221537DBC007EEFF2 /* SampleOre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4A333021537DBC007EEFF2 /* SampleOre.swift */; };
 		0B4A333321537DBC007EEFF2 /* SampleResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4A333121537DBC007EEFF2 /* SampleResponseData.swift */; };
 		0BE27B9F216380A200F670A3 /* Author.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 0BE27B9E216380A200F670A3 /* Author.graphql */; };
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		66D572DD10AA982C9A771A89 /* Pods_OreOre_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E11F8A08ABC1208FC4CF6A0F /* Pods_OreOre_Tests.framework */; };
 		B3B6A47DDB082FBFDEED6A1D /* Pods_OreOre_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E55B2D580400925F10DA1C3 /* Pods_OreOre_Example.framework */; };
 /* End PBXBuildFile section */
@@ -62,7 +61,6 @@
 		607FACD01AFB9204008FA782 /* OreOre_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OreOre_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACE51AFB9204008FA782 /* OreOre_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OreOre_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		84F81B952FF7D613A81C92EF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		8D6F54D1CF67E82057321E4A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		A11DCF046BB35E46C52AE0E0 /* Pods-OreOre_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OreOre_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OreOre_Example/Pods-OreOre_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -150,7 +148,6 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
 				0B4A333021537DBC007EEFF2 /* SampleOre.swift */,
 				0B4A333121537DBC007EEFF2 /* SampleResponseData.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
@@ -460,7 +457,6 @@
 			files = (
 				0B4A333321537DBC007EEFF2 /* SampleResponseData.swift in Sources */,
 				0B4A333221537DBC007EEFF2 /* SampleOre.swift in Sources */,
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

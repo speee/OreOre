@@ -10,13 +10,16 @@ import UIKit
 import Apollo
 
 class ViewController: UIViewController {
+  @IBOutlet weak var firstName: UILabel!
+  @IBOutlet weak var lastName: UILabel!
+  @IBOutlet weak var recentTitle: UILabel!
 
-    override func viewDidLoad() {
+  override func viewDidLoad() {
         super.viewDidLoad()
       apollo.fetch(query: AuthorQuery(id: 1)) { (result, error) in
-        print(result?.data?.author?.firstName)
-        print(result?.data?.author?.lastName)
-        print(result?.data?.author?.posts)
+        self.firstName.text = result?.data?.author?.firstName ?? ""
+        self.lastName.text = result?.data?.author?.lastName ?? ""
+        self.recentTitle.text = result?.data?.author?.posts?.first??.title ?? ""
       }
     }
 
