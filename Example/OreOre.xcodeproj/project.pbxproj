@@ -15,10 +15,11 @@
 		0B41252B215BA16000B64360 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B412525215BA15F00B64360 /* Info.plist */; };
 		0B41252C215BA16000B64360 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B412526215BA15F00B64360 /* ViewController.swift */; };
 		0B41252E215BA1F700B64360 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B41252D215BA1F700B64360 /* API.swift */; };
-		0B4A333221537DBC007EEFF2 /* SampleOre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4A333021537DBC007EEFF2 /* SampleOre.swift */; };
-		0B4A333321537DBC007EEFF2 /* SampleResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4A333121537DBC007EEFF2 /* SampleResponseData.swift */; };
+		0B8B25C8217F1FFB009C423E /* UITestBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8B25C6217F1F76009C423E /* UITestBase.swift */; };
+		0B8B25C9217F20AA009C423E /* SampleOre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4A333021537DBC007EEFF2 /* SampleOre.swift */; };
+		0B8B25CA217F20AA009C423E /* SampleResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4A333121537DBC007EEFF2 /* SampleResponseData.swift */; };
 		0BE27B9F216380A200F670A3 /* Author.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 0BE27B9E216380A200F670A3 /* Author.graphql */; };
-		66D572DD10AA982C9A771A89 /* Pods_OreOre_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E11F8A08ABC1208FC4CF6A0F /* Pods_OreOre_Tests.framework */; };
+		A68C2A89AC4EBFD5A3D9420B /* Pods_OreOre_ExampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 409D2E5042BBF73D9BA51F6C /* Pods_OreOre_ExampleUITests.framework */; };
 		B3B6A47DDB082FBFDEED6A1D /* Pods_OreOre_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E55B2D580400925F10DA1C3 /* Pods_OreOre_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,9 +55,11 @@
 		0B41252D215BA1F700B64360 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		0B4A333021537DBC007EEFF2 /* SampleOre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleOre.swift; sourceTree = "<group>"; };
 		0B4A333121537DBC007EEFF2 /* SampleResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleResponseData.swift; sourceTree = "<group>"; };
+		0B8B25C6217F1F76009C423E /* UITestBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestBase.swift; sourceTree = "<group>"; };
 		0BE27B9E216380A200F670A3 /* Author.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Author.graphql; sourceTree = "<group>"; };
-		33FDA270263A55CFF89E7626 /* Pods-OreOre_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OreOre_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OreOre_Tests/Pods-OreOre_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		2431BED600E22B2AD9EB3640 /* Pods-OreOre_ExampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OreOre_ExampleUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OreOre_ExampleUITests/Pods-OreOre_ExampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3E55B2D580400925F10DA1C3 /* Pods_OreOre_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OreOre_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		409D2E5042BBF73D9BA51F6C /* Pods_OreOre_ExampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OreOre_ExampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E25B8D51DFC5F22784A3155 /* OreOre.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = OreOre.podspec; path = ../OreOre.podspec; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* OreOre_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OreOre_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACE51AFB9204008FA782 /* OreOre_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OreOre_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,9 +67,9 @@
 		84F81B952FF7D613A81C92EF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		8D6F54D1CF67E82057321E4A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		A11DCF046BB35E46C52AE0E0 /* Pods-OreOre_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OreOre_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OreOre_Example/Pods-OreOre_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		DB27962CD84CCD426A8EF6F0 /* Pods-OreOre_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OreOre_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OreOre_Tests/Pods-OreOre_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		E11F8A08ABC1208FC4CF6A0F /* Pods_OreOre_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OreOre_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7EC6149B3552B85E340ED60 /* Pods-OreOre_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OreOre_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-OreOre_Example/Pods-OreOre_Example.release.xcconfig"; sourceTree = "<group>"; };
+		F4DD75E6006AF73B0DE34B29 /* Pods-OreOre_ExampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OreOre_ExampleUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OreOre_ExampleUITests/Pods-OreOre_ExampleUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A68C2A89AC4EBFD5A3D9420B /* Pods_OreOre_ExampleUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,7 +93,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66D572DD10AA982C9A771A89 /* Pods_OreOre_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				0B4A333021537DBC007EEFF2 /* SampleOre.swift */,
+				0B8B25C6217F1F76009C423E /* UITestBase.swift */,
 				0B4A333121537DBC007EEFF2 /* SampleResponseData.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
@@ -178,8 +182,8 @@
 			children = (
 				A11DCF046BB35E46C52AE0E0 /* Pods-OreOre_Example.debug.xcconfig */,
 				E7EC6149B3552B85E340ED60 /* Pods-OreOre_Example.release.xcconfig */,
-				33FDA270263A55CFF89E7626 /* Pods-OreOre_Tests.debug.xcconfig */,
-				DB27962CD84CCD426A8EF6F0 /* Pods-OreOre_Tests.release.xcconfig */,
+				2431BED600E22B2AD9EB3640 /* Pods-OreOre_ExampleUITests.debug.xcconfig */,
+				F4DD75E6006AF73B0DE34B29 /* Pods-OreOre_ExampleUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -189,6 +193,7 @@
 			children = (
 				3E55B2D580400925F10DA1C3 /* Pods_OreOre_Example.framework */,
 				E11F8A08ABC1208FC4CF6A0F /* Pods_OreOre_Tests.framework */,
+				409D2E5042BBF73D9BA51F6C /* Pods_OreOre_ExampleUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -200,9 +205,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0B412515215B8EDB00B64360 /* Build configuration list for PBXNativeTarget "OreOre_ExampleUITests" */;
 			buildPhases = (
+				94621E5BCC0A23A070A960EC /* [CP] Check Pods Manifest.lock */,
 				0B412508215B8EDB00B64360 /* Sources */,
 				0B412509215B8EDB00B64360 /* Frameworks */,
 				0B41250A215B8EDB00B64360 /* Resources */,
+				16950DA2A0AE93BF810D38E1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -238,11 +245,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "OreOre_Tests" */;
 			buildPhases = (
-				B18C3BD983A29620CF559D08 /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
-				9B5B9F9354C0F059CEEA5394 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -344,6 +349,32 @@
 			shellPath = /bin/sh;
 			shellScript = "APOLLO_FRAMEWORK_PATH=\"$(eval find $FRAMEWORK_SEARCH_PATHS -name \"Apollo.framework\" -maxdepth 1)\"\n\nif [ -z \"$APOLLO_FRAMEWORK_PATH\" ]; then\necho \"error: Couldn't find Apollo.framework in FRAMEWORK_SEARCH_PATHS; make sure to add the framework to your project.\"\nexit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}\"\n$APOLLO_FRAMEWORK_PATH/check-and-run-apollo-cli.sh codegen:generate --queries=\"$(find . -name '*.graphql')\" --schema=schema.json API.swift";
 		};
+		16950DA2A0AE93BF810D38E1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OreOre_ExampleUITests/Pods-OreOre_ExampleUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Apollo/Apollo.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSnapshotTestCase/FBSnapshotTestCase.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble-Snapshots/Nimble_Snapshots.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Apollo.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSnapshotTestCase.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble_Snapshots.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OreOre_ExampleUITests/Pods-OreOre_ExampleUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5299F75CA06F102A84551CFE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -370,31 +401,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OreOre_Example/Pods-OreOre_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9B5B9F9354C0F059CEEA5394 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-OreOre_Tests/Pods-OreOre_Tests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/FBSnapshotTestCase/FBSnapshotTestCase.framework",
-				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
-				"${BUILT_PRODUCTS_DIR}/Nimble-Snapshots/Nimble_Snapshots.framework",
-				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSnapshotTestCase.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble_Snapshots.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OreOre_Tests/Pods-OreOre_Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B18C3BD983A29620CF559D08 /* [CP] Check Pods Manifest.lock */ = {
+		94621E5BCC0A23A070A960EC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -405,7 +412,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-OreOre_Tests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-OreOre_ExampleUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -437,6 +444,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B8B25C8217F1FFB009C423E /* UITestBase.swift in Sources */,
+				0B8B25C9217F20AA009C423E /* SampleOre.swift in Sources */,
+				0B8B25CA217F20AA009C423E /* SampleResponseData.swift in Sources */,
 				0B41250F215B8EDB00B64360 /* OreOre_ExampleUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -455,8 +465,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B4A333321537DBC007EEFF2 /* SampleResponseData.swift in Sources */,
-				0B4A333221537DBC007EEFF2 /* SampleOre.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,6 +505,7 @@
 /* Begin XCBuildConfiguration section */
 		0B412513215B8EDB00B64360 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2431BED600E22B2AD9EB3640 /* Pods-OreOre_ExampleUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -525,6 +534,7 @@
 		};
 		0B412514215B8EDB00B64360 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4DD75E6006AF73B0DE34B29 /* Pods-OreOre_ExampleUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -680,7 +690,6 @@
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 33FDA270263A55CFF89E7626 /* Pods-OreOre_Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -703,7 +712,6 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DB27962CD84CCD426A8EF6F0 /* Pods-OreOre_Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				FRAMEWORK_SEARCH_PATHS = (

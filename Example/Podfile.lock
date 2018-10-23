@@ -25,6 +25,7 @@ PODS:
   - Quick (1.2.0)
 
 DEPENDENCIES:
+  - Apollo
   - FBSnapshotTestCase (~> 2.1.4)
   - Nimble (~> 7.0.2)
   - Nimble-Snapshots (~> 6.3.0)
@@ -57,6 +58,6 @@ SPEC CHECKSUMS:
   OreOre: 7b6bb7fe52e3b100c9935d66d3348ce82aff99b7
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
 
-PODFILE CHECKSUM: 2d52855aef13761d7ffcfa50cefb704b894f896a
+PODFILE CHECKSUM: 0a7eec844e40147fbbb29aacc5ccd3760b434a08
 
 COCOAPODS: 1.5.3
