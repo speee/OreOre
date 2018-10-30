@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="OreOre_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXx-1S-wJ1">
+                                <rect key="frame" x="146" y="147" width="83" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHc-Oq-lVx">
+                                <rect key="frame" x="146.5" y="197" width="82" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recent Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jUD-A1-8ZO">
+                                <rect key="frame" x="142" y="269" width="91" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="LHc-Oq-lVx" firstAttribute="top" secondItem="cXx-1S-wJ1" secondAttribute="bottom" constant="29" id="07G-m3-j5X"/>
+                            <constraint firstItem="LHc-Oq-lVx" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="0Qn-86-LdM"/>
+                            <constraint firstItem="cXx-1S-wJ1" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="127" id="2MA-ay-vAY"/>
+                            <constraint firstItem="cXx-1S-wJ1" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="52p-0a-4Ak"/>
+                            <constraint firstItem="jUD-A1-8ZO" firstAttribute="top" secondItem="LHc-Oq-lVx" secondAttribute="bottom" constant="51" id="6ga-DE-zI6"/>
+                            <constraint firstItem="jUD-A1-8ZO" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="9FC-2D-0Ks"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="firstName" destination="cXx-1S-wJ1" id="XxM-6L-QML"/>
+                        <outlet property="lastName" destination="LHc-Oq-lVx" id="3RC-0l-pgJ"/>
+                        <outlet property="recentTitle" destination="jUD-A1-8ZO" id="5P4-we-Sc7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

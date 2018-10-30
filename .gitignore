@@ -179,3 +179,4 @@ Packages
 ### Xcode Patch ###
 
 # End of https://www.gitignore.io/api/xcode,swift,appcode,swiftpm,carthage,cocoapods
+node_modules

@@ -21,7 +21,7 @@
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
-            buildForTesting = "YES"
+            buildForTesting = "NO"
             buildForRunning = "YES"
             buildForProfiling = "NO"
             buildForArchiving = "NO"
@@ -46,9 +46,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "OreOre_Tests.xctest"
-               BlueprintName = "OreOre_Tests"
+               BlueprintIdentifier = "0B41250B215B8EDB00B64360"
+               BuildableName = "OreOre_ExampleUITests.xctest"
+               BlueprintName = "OreOre_ExampleUITests"
                ReferencedContainer = "container:OreOre.xcodeproj">
             </BuildableReference>
          </TestableReference>
