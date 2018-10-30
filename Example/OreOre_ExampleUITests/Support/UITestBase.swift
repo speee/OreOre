@@ -32,7 +32,16 @@ internal class UITestBase: XCTestCase {
       type(of: self).launched = true
       setupWebApp()
       setupApp()
+      launch()
     }
+  }
+
+  func launch() {
+    XCUIDevice.shared.orientation = .portrait
+
+    let app = XCUIApplication()
+    app.launchArguments.append("UITest")
+    app.launch()
   }
 
 

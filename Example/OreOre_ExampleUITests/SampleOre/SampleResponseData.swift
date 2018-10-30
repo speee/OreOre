@@ -12,4 +12,18 @@ import OreOre
 
 public struct Responses {
   static var shared = Responses()
+
+  struct Author: QueryResponse {
+    typealias DataSet = AuthorQuery.Data
+
+    typealias Item = DataSet.Author
+
+
+    var response: DataSet {
+      let author = Item.init(with:Ore.author["1"])
+
+      return DataSet.init(author: author)
+    }
+
+  }
 }

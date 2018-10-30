@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B0579F821885B3B00D4BD89 /* ApolloClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0579F721885B3B00D4BD89 /* ApolloClient.swift */; };
 		0B41250F215B8EDB00B64360 /* OreOre_ExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B41250E215B8EDB00B64360 /* OreOre_ExampleUITests.swift */; };
 		0B412527215BA16000B64360 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B41251F215BA15F00B64360 /* AppDelegate.swift */; };
 		0B412528215BA16000B64360 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B412520215BA15F00B64360 /* LaunchScreen.xib */; };
@@ -15,9 +16,12 @@
 		0B41252B215BA16000B64360 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B412525215BA15F00B64360 /* Info.plist */; };
 		0B41252C215BA16000B64360 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B412526215BA15F00B64360 /* ViewController.swift */; };
 		0B41252E215BA1F700B64360 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B41252D215BA1F700B64360 /* API.swift */; };
-		0B8B25C8217F1FFB009C423E /* UITestBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8B25C6217F1F76009C423E /* UITestBase.swift */; };
-		0B8B25C9217F20AA009C423E /* SampleOre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4A333021537DBC007EEFF2 /* SampleOre.swift */; };
-		0B8B25CA217F20AA009C423E /* SampleResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4A333121537DBC007EEFF2 /* SampleResponseData.swift */; };
+		0B557D4E218863630067A5F9 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B41252D215BA1F700B64360 /* API.swift */; };
+		0B81BBC32188611100FF4D08 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B81BBC22188611100FF4D08 /* Info.plist */; };
+		0B81BBC92188611E00FF4D08 /* Fakery+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B81BBC52188611E00FF4D08 /* Fakery+extension.swift */; };
+		0B81BBCA2188611E00FF4D08 /* UITestBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B81BBC62188611E00FF4D08 /* UITestBase.swift */; };
+		0B81BBCB2188611E00FF4D08 /* SampleResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B81BBC72188611E00FF4D08 /* SampleResponseData.swift */; };
+		0B81BBCC2188611E00FF4D08 /* SampleOre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B81BBC82188611E00FF4D08 /* SampleOre.swift */; };
 		0BE27B9F216380A200F670A3 /* Author.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 0BE27B9E216380A200F670A3 /* Author.graphql */; };
 		A68C2A89AC4EBFD5A3D9420B /* Pods_OreOre_ExampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 409D2E5042BBF73D9BA51F6C /* Pods_OreOre_ExampleUITests.framework */; };
 		B3B6A47DDB082FBFDEED6A1D /* Pods_OreOre_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E55B2D580400925F10DA1C3 /* Pods_OreOre_Example.framework */; };
@@ -41,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B0579F721885B3B00D4BD89 /* ApolloClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApolloClient.swift; sourceTree = "<group>"; };
 		0B41250C215B8EDB00B64360 /* OreOre_ExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OreOre_ExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B41250E215B8EDB00B64360 /* OreOre_ExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OreOre_ExampleUITests.swift; sourceTree = "<group>"; };
 		0B412510215B8EDB00B64360 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,9 +58,11 @@
 		0B412525215BA15F00B64360 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B412526215BA15F00B64360 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0B41252D215BA1F700B64360 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
-		0B4A333021537DBC007EEFF2 /* SampleOre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleOre.swift; sourceTree = "<group>"; };
-		0B4A333121537DBC007EEFF2 /* SampleResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleResponseData.swift; sourceTree = "<group>"; };
-		0B8B25C6217F1F76009C423E /* UITestBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestBase.swift; sourceTree = "<group>"; };
+		0B81BBC22188611100FF4D08 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B81BBC52188611E00FF4D08 /* Fakery+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Fakery+extension.swift"; sourceTree = "<group>"; };
+		0B81BBC62188611E00FF4D08 /* UITestBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITestBase.swift; sourceTree = "<group>"; };
+		0B81BBC72188611E00FF4D08 /* SampleResponseData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleResponseData.swift; sourceTree = "<group>"; };
+		0B81BBC82188611E00FF4D08 /* SampleOre.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleOre.swift; sourceTree = "<group>"; };
 		0BE27B9E216380A200F670A3 /* Author.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Author.graphql; sourceTree = "<group>"; };
 		2431BED600E22B2AD9EB3640 /* Pods-OreOre_ExampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OreOre_ExampleUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OreOre_ExampleUITests/Pods-OreOre_ExampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3E55B2D580400925F10DA1C3 /* Pods_OreOre_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OreOre_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,7 +70,6 @@
 		4E25B8D51DFC5F22784A3155 /* OreOre.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = OreOre.podspec; path = ../OreOre.podspec; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* OreOre_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OreOre_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACE51AFB9204008FA782 /* OreOre_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OreOre_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84F81B952FF7D613A81C92EF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		8D6F54D1CF67E82057321E4A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		A11DCF046BB35E46C52AE0E0 /* Pods-OreOre_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OreOre_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OreOre_Example/Pods-OreOre_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -99,9 +105,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B0579FD2188606E00D4BD89 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				0B81BBC22188611100FF4D08 /* Info.plist */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 		0B41250D215B8EDB00B64360 /* OreOre_ExampleUITests */ = {
 			isa = PBXGroup;
 			children = (
+				0B557D4D218861E00067A5F9 /* SampleOre */,
+				0B81BBC42188611E00FF4D08 /* Support */,
 				0B41250E215B8EDB00B64360 /* OreOre_ExampleUITests.swift */,
 				0B412510215B8EDB00B64360 /* Info.plist */,
 			);
@@ -112,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				0B41252D215BA1F700B64360 /* API.swift */,
+				0B0579F721885B3B00D4BD89 /* ApolloClient.swift */,
 				0B412519215B9F7200B64360 /* schema.json */,
 				0B41251B215B9F9900B64360 /* Posts.graphql */,
 				0BE27B9E216380A200F670A3 /* Author.graphql */,
@@ -125,12 +142,30 @@
 			path = OreOre_Example;
 			sourceTree = "<group>";
 		};
+		0B557D4D218861E00067A5F9 /* SampleOre */ = {
+			isa = PBXGroup;
+			children = (
+				0B81BBC82188611E00FF4D08 /* SampleOre.swift */,
+				0B81BBC72188611E00FF4D08 /* SampleResponseData.swift */,
+			);
+			path = SampleOre;
+			sourceTree = "<group>";
+		};
+		0B81BBC42188611E00FF4D08 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				0B81BBC52188611E00FF4D08 /* Fakery+extension.swift */,
+				0B81BBC62188611E00FF4D08 /* UITestBase.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				0B0579FD2188606E00D4BD89 /* Tests */,
 				0B41251E215BA15F00B64360 /* OreOre_Example */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
-				607FACE81AFB9204008FA782 /* Tests */,
 				0B41250D215B8EDB00B64360 /* OreOre_ExampleUITests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				88EBA799D7549A781D8D5088 /* Pods */,
@@ -146,25 +181,6 @@
 				0B41250C215B8EDB00B64360 /* OreOre_ExampleUITests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		607FACE81AFB9204008FA782 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				0B4A333021537DBC007EEFF2 /* SampleOre.swift */,
-				0B8B25C6217F1F76009C423E /* UITestBase.swift */,
-				0B4A333121537DBC007EEFF2 /* SampleResponseData.swift */,
-				607FACE91AFB9204008FA782 /* Supporting Files */,
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
-		607FACE91AFB9204008FA782 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				607FACEA1AFB9204008FA782 /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
@@ -319,6 +335,7 @@
 			files = (
 				0B41252B215BA16000B64360 /* Info.plist in Resources */,
 				0B41252A215BA16000B64360 /* Images.xcassets in Resources */,
+				0B81BBC32188611100FF4D08 /* Info.plist in Resources */,
 				0B412528215BA16000B64360 /* LaunchScreen.xib in Resources */,
 				0B412529215BA16000B64360 /* Main.storyboard in Resources */,
 				0BE27B9F216380A200F670A3 /* Author.graphql in Resources */,
@@ -452,10 +469,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B8B25C8217F1FFB009C423E /* UITestBase.swift in Sources */,
-				0B8B25C9217F20AA009C423E /* SampleOre.swift in Sources */,
-				0B8B25CA217F20AA009C423E /* SampleResponseData.swift in Sources */,
 				0B41250F215B8EDB00B64360 /* OreOre_ExampleUITests.swift in Sources */,
+				0B81BBCC2188611E00FF4D08 /* SampleOre.swift in Sources */,
+				0B81BBC92188611E00FF4D08 /* Fakery+extension.swift in Sources */,
+				0B81BBCB2188611E00FF4D08 /* SampleResponseData.swift in Sources */,
+				0B557D4E218863630067A5F9 /* API.swift in Sources */,
+				0B81BBCA2188611E00FF4D08 /* UITestBase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,6 +485,7 @@
 				0B41252C215BA16000B64360 /* ViewController.swift in Sources */,
 				0B41252E215BA1F700B64360 /* API.swift in Sources */,
 				0B412527215BA16000B64360 /* AppDelegate.swift in Sources */,
+				0B0579F821885B3B00D4BD89 /* ApolloClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

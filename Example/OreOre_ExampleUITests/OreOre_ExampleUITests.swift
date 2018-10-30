@@ -7,22 +7,22 @@
 //
 
 import XCTest
+import Nimble
 
-class OreOre_ExampleUITests: XCTestCase {
-        
-    override func setUp() {
-        super.setUp()
-        
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
+
+class OreOre_ExampleUITests: UITestBase {
+
+  override func setUp() {
+    // setup router before super.setUp()
+    router.append(AuthorQuery(id: 0).operationDefinition, Responses.Author())
+    super.setUp()
+
+  }
+
+  func testExample() {
+    let author = Ore.author["1"]
+    expect(self.app.staticTexts[author.firstName].exists).to(beTrue())
+    expect(self.app.staticTexts[author.lastName].exists).to(beTrue())
+  }
+
 }
